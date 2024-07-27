@@ -1,0 +1,270 @@
+@font-face{src: url(fonts/BebasNeue-Regular.ttf); font-family: Bebas;}
+@font-face{ src: url(fonts/Kanit-Regular.ttf); font-family: Kanit;}
+
+nav{
+    position: absolute;
+}
+.nav{
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+    position: fixed;
+    top: 0px;
+}
+.navbar{
+    border: none;
+    appearance: none;
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+.choose{
+    text-align: center;
+}
+img{
+    height: 100vh;
+    animation: Logofade 2s linear;
+}
+.b{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.questions button{
+    border: none;
+    background-color: rgb(157, 157, 255);
+    color: white;
+    text-align: center;
+}
+.questions button :hover{
+    box-shadow: 10px 10px rgb(64, 64, 104);
+    display: block;
+}
+.questions #blank{
+    display: none;
+}
+.questions table{
+    display: none;
+}
+.labels{
+    font-family: Kanit;
+    font-size: 20px;
+    text-align: center;
+    color: white;    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    position: relative;
+}
+.wrapper{
+    width: 400px;
+    height: 200px;
+    background-color: black;
+    overflow: hidden;
+}
+.container .wrapholder{
+    display: grid;
+    grid-template-columns: repeat(4,100%);
+    height: 100%;
+    width: 50%;
+}
+.container #img1{
+    background-image: url(pictures/retrobrand.png);
+    background-position: center;
+}
+.container #img2{
+    background-image: url(pictures/wavewebsite.mp4);
+    background-position: center;
+}
+.container #img3{
+    background-image: url(pictures/Billboardad.jfif);
+    background-position: center;
+}
+.container #img4{
+    background-image: url(pictures/firead.png);
+    background-position: center;
+}
+.container .buttonholder .button1{
+    background-color: rgb(255, 54, 54);
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    display: inline-block;
+}
+.container .buttonholder{
+    position: absolute;
+    left: 45%;
+    bottom: 0%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#starttoday{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    max-width: 750px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.gmail{
+    background-image: url(pictures/)
+}
+.youtube{
+    background-image: url(pictures/you\ icon.png);
+    background-position: center;
+}
+.tele{
+
+}
+.Facebook{
+
+}
+.instagram{
+
+}
+.twitter{
+    
+}
+.title{
+    font-family: Bebas;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.socials{
+    display: flex;
+    height: fit-content ;
+    width: fit-content;
+    max-width: 750px;
+    background-color: rgb(157, 157, 255);
+    border-radius: 10px;
+    padding: 10px;
+    animation: bluepopup linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 20%;
+    flex-direction: row;
+}
+.gmail{
+
+}
+.tele{}
+.Facebook{}
+.twitter{}
+.youtube{}
+.instagram{}
+.redblock{
+    height: fit-content;
+    width: fit-content;
+    max-width: 750px;
+    border-radius: 10px;
+    background-color: rgb(255, 54, 54);
+    padding: 10px;
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.blueblock{
+    height: fit-content ;
+    width: fit-content;
+    max-width: 750px;
+    background-color: rgb(157, 157, 255);
+    border-radius: 10px;
+    padding: 10px;
+    animation: bluepopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.titles{
+    font-family: Bebas;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.paragraph{
+    font-family: Kanit;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+@keyframes redpopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-10px, -10px);
+        box-shadow: 10px 10px rgb(128, 25, 25);
+    }
+}
+
+@keyframes bluepopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-10px, -10px);
+        box-shadow: 10px 10px rgb(64, 64, 104);
+    }
+}
+
+@media screen(max-width:800px;){
+    head, aside, section, article{
+        width: 100%;
+    }
+}
+
+@media (min-height:450px){
+    img{
+        max-height: 450px;
+    }
+}
+
+@media (min-height:1000px){
+    img{
+        max-height: 1000px;
+        max-width: 1000px;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes Logofade{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
