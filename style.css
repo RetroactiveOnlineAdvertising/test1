@@ -10,6 +10,7 @@ nav{
     margin-right: auto;
     position: fixed;
     top: 0px;
+    z-index: 1;
 }
 .navbar{
     border: none;
@@ -38,22 +39,6 @@ img{
     align-content: center;
     align-items: center;
 }
-.questions button{
-    border: none;
-    background-color: rgb(157, 157, 255);
-    color: white;
-    text-align: center;
-}
-.questions button :hover{
-    box-shadow: 10px 10px rgb(64, 64, 104);
-    display: block;
-}
-.questions #blank{
-    display: none;
-}
-.questions table{
-    display: none;
-}
 .labels{
     font-family: Kanit;
     font-size: 20px;
@@ -65,36 +50,111 @@ main{
     flex-direction: column;
     align-items: center;
 }
+
 .container{
-    position: relative;
+    padding: 10px;
 }
 .wrapper{
-    width: 400px;
-    height: 200px;
+    position: relative;
+    max-width: 500px;
+    margin:  0 auto;
+    border: 50px solid white;
+    border-bottom: 50px solid white;
+}
+.wrapholder{
+    display: flex;
+    border-radius: 10px;
+    overflow-x: auto;
+    /*scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;*/
+}
+.wrapholder img{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.wrapholder video{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.buttonholder{
+    position: absolute;
+    display: flex;
+    column-gap: 5px;
+    bottom: -800px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.buttonholder a{
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.buttonholder a:hover{
+    opacity: 1;
+}
+
+.container2{
+    padding: 10px;
+}
+.wrapper2{
+    position: relative;
+    max-width: 500px;
+    margin:  0 auto;
+    border: 50px solid white;
+    border-bottom: 50px solid white;
+}
+.wrapholder2{
+    display: flex;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+.wrapholder2 img{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.wrapholder2 video{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+
+/*.container{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+}
+.wrapper{
+    width: fit-content;
+    height: fit-content;
     background-color: black;
-    overflow: hidden;
+    overflow: auto;
 }
 .container .wrapholder{
     display: grid;
     grid-template-columns: repeat(4,100%);
-    height: 100%;
-    width: 50%;
+    width: 400px;
+    height: 200px;
 }
 .container #img1{
-    background-image: url(pictures/retrobrand.png);
-    background-position: center;
+    height: 100%;
 }
 .container #img2{
-    background-image: url(pictures/wavewebsite.mp4);
-    background-position: center;
+    height: 50px;
 }
 .container #img3{
-    background-image: url(pictures/Billboardad.jfif);
-    background-position: center;
+    height: 100%;
 }
 .container #img4{
-    background-image: url(pictures/firead.png);
-    background-position: center;
+    height: 100%;
 }
 .container .buttonholder .button1{
     background-color: rgb(255, 54, 54);
@@ -107,7 +167,8 @@ main{
     position: absolute;
     left: 45%;
     bottom: 0%;
-}
+}*/
+
 section{
     display: flex;
     flex-direction: column;
@@ -134,26 +195,9 @@ footer{
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    row-gap: 20px;
 }
-.gmail{
-    background-image: url(pictures/)
-}
-.youtube{
-    background-image: url(pictures/you\ icon.png);
-    background-position: center;
-}
-.tele{
 
-}
-.Facebook{
-
-}
-.instagram{
-
-}
-.twitter{
-    
-}
 .title{
     font-family: Bebas;
     font-size: 50px;
@@ -164,23 +208,101 @@ footer{
     display: flex;
     height: fit-content ;
     width: fit-content;
-    max-width: 750px;
+    max-width: 900px;
     background-color: rgb(157, 157, 255);
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 10px;
+    column-gap: 10px;
     animation: bluepopup linear both;
     animation-timeline: view();
     animation-range: entry 20% cover 20%;
     flex-direction: row;
 }
 .gmail{
-
+display: flex;
+flex-direction: column;
+height: 100px;
+width: 50px;
+border-radius: 5px;
+background-color: rgb(255, 54, 54);
+box-shadow: 5px 5px rgb(128, 25, 25);
 }
-.tele{}
-.Facebook{}
-.twitter{}
-.youtube{}
-.instagram{}
+.gmail img{
+    height: 50px;
+    background-color:  white;
+    border-radius: 5px;
+}
+.tele{
+    display: flex;
+flex-direction: column;
+height: 100px;
+width: 50px;
+border-radius: 5px;
+background-color: rgb(255, 54, 54);
+box-shadow: 5px 5px rgb(128, 25, 25);
+}
+.tele img{
+    height: 50px;
+    background-color:  white;
+    border-radius: 5px;
+}
+.Facebook{
+    display: flex;
+flex-direction: column;
+height: 100px;
+width: 50px;
+border-radius: 5px;
+background-color: rgb(255, 54, 54);
+box-shadow: 5px 5px rgb(128, 25, 25);
+}
+.Facebook img{
+    height: 50px;
+    background-color:  white;
+    border-radius: 5px;
+}
+.twitter{
+    display: flex;
+flex-direction: column;
+height: 100px;
+width: 50px;
+border-radius: 5px;
+background-color: rgb(255, 54, 54);
+box-shadow: 5px 5px rgb(128, 25, 25);
+}
+.twitter img{
+    height: 50px;
+    background-color:  white;
+    border-radius: 5px;
+}
+.youtube{
+    display: flex;
+flex-direction: column;
+height: 100px;
+width: 50px;
+border-radius: 5px;
+background-color: rgb(255, 54, 54);
+box-shadow: 5px 5px rgb(128, 25, 25);
+}
+.youtube img{
+    height: 50px;
+    background-color:  white;
+    border-radius: 5px;
+}
+.instagram{
+    display: flex;
+flex-direction: column;
+height: 100px;
+width: 50px;
+border-radius: 5px;
+background-color: rgb(255, 54, 54);
+box-shadow: 5px 5px rgb(128, 25, 25);
+}
+.instagram img{
+    height: 50px;
+    background-color:  white;
+    border-radius: 5px;
+}
+
 .redblock{
     height: fit-content;
     width: fit-content;
@@ -215,6 +337,20 @@ footer{
     text-align: center;
     color: white;
 }
+.paragraph2{
+    font-family: Kanit;
+    font-size:small;
+    text-align: center;
+    color: white;
+}
+.paragraph3{
+    font-family: Kanit;
+    font-size:small;
+    text-align: center;
+    color: white;
+    background-color: rgb(157, 157, 255);
+    border-radius: 10px;
+}
 
 @keyframes redpopup{
     from{
@@ -236,8 +372,27 @@ footer{
     }
 }
 
-@media screen(max-width:800px;){
-    head, aside, section, article{
+
+@media (max-width:1000px;){
+    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+        width: 100%;
+    }
+}
+
+@media (max-width:800px;){
+    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px;){
+    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+        width: 100%;
+    }
+}
+
+@media (max-width:300px;){
+    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
         width: 100%;
     }
 }
