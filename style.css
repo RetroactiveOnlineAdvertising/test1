@@ -1,6 +1,15 @@
 @font-face{src: url(fonts/BebasNeue-Regular.ttf); font-family: Bebas;}
 @font-face{ src: url(fonts/Kanit-Regular.ttf); font-family: Kanit;}
 
+/*body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: -webkit-fill-avaliable;
+}*/
+/*html{
+    height: -webkit-fill-avaliable;
+}*/
 nav{
     position: absolute;
 }
@@ -99,32 +108,6 @@ main{
     opacity: 1;
 }
 
-.container2{
-    padding: 10px;
-}
-.wrapper2{
-    position: relative;
-    max-width: 500px;
-    margin:  0 auto;
-    border: 50px solid white;
-    border-bottom: 50px solid white;
-}
-.wrapholder2{
-    display: flex;
-    border-radius: 10px;
-    overflow-x: auto;
-}
-.wrapholder2 img{
-    flex: 1 0 100%;
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-.wrapholder2 video{
-    flex: 1 0 100%;
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-
 
 /*.container{
     position: relative;
@@ -171,25 +154,139 @@ main{
 
 section{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    row-gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
+
+.container2{
+    padding: 10px;
+}
+.wrapper2{
+    position: relative;
+    max-width: 500px;
+    margin:  0 auto;
+    border: 50px solid white;
+    border-bottom: 50px solid white;
+}
+.wrapholder2{
+    display: flex;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+.wrapholder2 img{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.wrapholder2 video{
+    flex: 1 0 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+.influence{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#influencer1{
+    transform: translateX(50px);
+    border: 10px solid rgb(255, 54, 54) ;
+    background-color: white;
+    border-radius: 50%;
+    height:200px;
+    align-self: center;
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+#influencer2{
+    transform: translateY(-150px);
+    border: 10px solid rgb(255, 54, 54) ;
+    background-color: white;
+    border-radius: 50%;
+    height:200px;
+    align-self: center;
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+#influencer3{
+    transform: translateX(-50px);
+    border: 10px solid rgb(255, 54, 54) ;
+    background-color: white;
+    border-radius: 50%;
+    height:200px;
+    align-self: center;
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+
 aside{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.questions{
+    display: flex;
+    flex-direction: column;
+}
+.quest1{
+    background-color: rgb(157, 157, 255);
+    border: none;
+    text-decoration: underline;
+    align-self: center;
+}
+.quest1 p{
+    display: block;
+    align-self: center;
+}
+.quest1 .ans1{
+    display: none;
+    align-self: center;
+}
+.quest1:hover .ans1{
+    display: block;
+    align-self: center;
+}
+.answers{
+    text-decoration: none;
+}
+.quest2{
+    background-color: rgb(157, 157, 255);
+    border: none;
+    text-decoration: underline;
+    align-self: center;
+}
+.quest2 p{
+    display: block;
+}
+.quest2 .ans2{
+    display: none;
+}
+.quest2:hover .ans2{
+    display: block;
+}
+table{
+    border: 3px white;
+}
+
+
 #starttoday{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 form{
     display: flex;
     flex-direction: column;
-    width: 600px;
     max-width: 750px;
 }
+
 footer{
     display: flex;
     flex-direction: column;
@@ -198,12 +295,6 @@ footer{
     row-gap: 20px;
 }
 
-.title{
-    font-family: Bebas;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-}
 .socials{
     display: flex;
     height: fit-content ;
@@ -224,10 +315,9 @@ flex-direction: column;
 height: 100px;
 width: 50px;
 border-radius: 5px;
-background-color: rgb(255, 54, 54);
-box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .gmail img{
+    width: 50px;
     height: 50px;
     background-color:  white;
     border-radius: 5px;
@@ -238,13 +328,14 @@ flex-direction: column;
 height: 100px;
 width: 50px;
 border-radius: 5px;
-background-color: rgb(255, 54, 54);
-box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .tele img{
     height: 50px;
-    background-color:  white;
+    background-color: white;
     border-radius: 5px;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    align-self: center;
 }
 .Facebook{
     display: flex;
@@ -252,8 +343,6 @@ flex-direction: column;
 height: 100px;
 width: 50px;
 border-radius: 5px;
-background-color: rgb(255, 54, 54);
-box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .Facebook img{
     height: 50px;
@@ -266,8 +355,6 @@ flex-direction: column;
 height: 100px;
 width: 50px;
 border-radius: 5px;
-background-color: rgb(255, 54, 54);
-box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .twitter img{
     height: 50px;
@@ -280,8 +367,6 @@ flex-direction: column;
 height: 100px;
 width: 50px;
 border-radius: 5px;
-background-color: rgb(255, 54, 54);
-box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .youtube img{
     height: 50px;
@@ -294,8 +379,6 @@ flex-direction: column;
 height: 100px;
 width: 50px;
 border-radius: 5px;
-background-color: rgb(255, 54, 54);
-box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .instagram img{
     height: 50px;
@@ -303,6 +386,8 @@ box-shadow: 5px 5px rgb(128, 25, 25);
     border-radius: 5px;
 }
 
+
+/*all block classes*/
 .redblock{
     height: fit-content;
     width: fit-content;
@@ -325,11 +410,29 @@ box-shadow: 5px 5px rgb(128, 25, 25);
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
 }
+
+/*all text classes*/
 .titles{
     font-family: Bebas;
     font-size: 50px;
     text-align: center;
     color: white;
+}
+.title{
+    font-family: Bebas;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+.title3{
+    font-family: Bebas;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 54, 54);
+    border-radius: 10px;
+    border: solid rgb(128, 25, 25);
+    box-shadow: 5px 5px rgb(128, 25, 25);
 }
 .paragraph{
     font-family: Kanit;
@@ -350,8 +453,21 @@ box-shadow: 5px 5px rgb(128, 25, 25);
     color: white;
     background-color: rgb(157, 157, 255);
     border-radius: 10px;
+    border: solid rgb(64, 64, 104);
+    box-shadow: 5px 5px rgb(64, 64, 104);
+}
+.paragraph4{
+    font-family: Kanit;
+    font-size:small;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 54, 54);
+    border-radius: 10px;
+    border: solid rgb(128, 25, 25);
+    box-shadow: 5px 5px rgb(128, 25, 25);
 }
 
+/*animation for all blocks*/
 @keyframes redpopup{
     from{
         transform: translate(10px, 10px);
@@ -372,31 +488,74 @@ box-shadow: 5px 5px rgb(128, 25, 25);
     }
 }
 
-
+/*breakpoint for 1000px*/
 @media (max-width:1000px;){
-    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+    head, main, aside, section, article, footer{
         width: 100%;
     }
 }
+@media (max-width:1000px;){
+    .container, .wrapper, .wrapholder{
+        width: 100%;
+    }
+}
+@media (max-width:1000px;){
+    .container2, .wrapper2, .wrapholder2, .influence{
+        width: 50%;
+    }
+}
 
+/*breakpoint for 800px*/
 @media (max-width:800px;){
-    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+    head, main, aside, section, article, footer{
         width: 100%;
     }
 }
+@media (max-width:800px;){
+    .container, .wrapper, .wrapholder{
+        width: 100%;
+    }
+}
+@media (max-width:800px;){
+    .container2, .wrapper2, .wrapholder2, .influence{
+        width: 50%;
+    }
+}
 
+/*breakpoint for 500px*/
 @media (max-width:500px;){
-    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+    head, main, aside, section, article, footer{
         width: 100%;
     }
 }
-
-@media (max-width:300px;){
-    head, main, aside, section, article, footer, .container, .container2, .wrapper, .wrapholder2, .wrapper2, .wrapholder{
+@media (max-width:500px;){
+    .container, .wrapper, .wrapholder{
         width: 100%;
     }
 }
+@media (max-width:500px;){
+    .container2, .wrapper2, .wrapholder2, .influence{
+        width: 50%;
+    }
+}
 
+/*breakpoint for 301px*/
+@media (max-width:301px;){
+    head, main, aside, section, article, footer{
+    width: 100%;}
+}
+@media (max-width:301px;){
+    .container, .wrapper, .wrapholder{
+        width: 100%;
+    }
+}
+@media (max-width:301px;){
+    .container2, .wrapper2, .wrapholder2, .influence{
+        width: 50%;
+    }
+}
+
+/*breakpoint for intro image*/
 @media (min-height:450px){
     img{
         max-height: 450px;
@@ -410,6 +569,7 @@ box-shadow: 5px 5px rgb(128, 25, 25);
     }
 }
 
+/*animation for logo*/
 @keyframes fade{
     from{
         opacity: 0;
@@ -423,3 +583,5 @@ box-shadow: 5px 5px rgb(128, 25, 25);
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
+
+/*only screen and (orientation:portrait or landscape;)*/
