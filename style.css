@@ -10,6 +10,9 @@
 /*html{
     height: -webkit-fill-avaliable;
 }*/
+body{
+    margin: 0;
+}
 nav{
     position: absolute;
 }
@@ -34,6 +37,8 @@ nav{
 }
 .choose{
     text-align: center;
+    background-color: gray;
+    height: 100vh;
 }
 img{
     height: 100vh;
@@ -153,72 +158,104 @@ main{
 }*/
 
 section{
-    display: flex;
-    flex-direction: row;
-    row-gap: 10px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 600px 400px;
+    grid-template-rows: 350px;
+    grid-auto-rows: min-content;
+    grid-gap: 10px 10px;
+    transform: translateX(150px);
 }
 
 .container2{
     padding: 10px;
+    /*top: -75px;
+    right: -100px;*/
+    margin: 10px;
 }
 .wrapper2{
     position: relative;
-    max-width: 500px;
+    width: 300px;
+    height: 400px;
     margin:  0 auto;
-    border: 50px solid white;
+    border: 20px solid white;
     border-bottom: 50px solid white;
+    /*top: -75px;
+    right: -100px;*/
 }
 .wrapholder2{
     display: flex;
     border-radius: 10px;
     overflow-x: auto;
+    width: 300px;
+    height: 400px;
+    /*top: -75px;
+    right: -100px;*/
 }
 .wrapholder2 img{
-    flex: 1 0 100%;
-    object-fit: cover;
+    /*flex: 1 0 100%;
+    object-fit: cover;*/
     scroll-snap-align: start;
+    width: 250px;
+    height: 250px;
+    /*top: -75px;
+    right: -100px;*/
 }
-.wrapholder2 video{
-    flex: 1 0 100%;
-    object-fit: cover;
-    scroll-snap-align: start;
-}
-.influence{
-    display: flex;
-    flex-direction: column;
+
+#influencegroup{
+    margin: 0 auto;
+    flex-direction: row;
     flex-wrap: wrap;
 }
-#influencer1{
-    transform: translateX(50px);
-    border: 10px solid rgb(255, 54, 54) ;
-    background-color: white;
-    border-radius: 50%;
-    height:200px;
-    align-self: center;
-    animation: redpopup linear both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%;
-}
-#influencer2{
-    transform: translateY(-150px);
-    border: 10px solid rgb(255, 54, 54) ;
-    background-color: white;
-    border-radius: 50%;
-    height:200px;
-    align-self: center;
-    animation: redpopup linear both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%;
+.influence{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    column-gap: 5px;
+    row-gap: 5px;
 }
 #influencer3{
-    transform: translateX(-50px);
     border: 10px solid rgb(255, 54, 54) ;
     background-color: white;
     border-radius: 50%;
-    height:200px;
+    height:100px;
+    float: left;
     align-self: center;
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    background-color: rgb(255, 54, 54);
+    border: solid rgb(128, 25, 25);
+    box-shadow: 5px 5px rgb(128, 25, 25);
+}
+.title5{
+    /*transform: translateY(-20px);*/
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    font-family: Bebas;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 54, 54);
+    border: solid rgb(128, 25, 25);
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+.paragraph4{
+    /*transform: translateY(-20px);*/
+    bottom: -100px;
+    font-family: Kanit;
+    font-size:small;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(255, 54, 54);
+    border: solid rgb(128, 25, 25);
     animation: redpopup linear both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
@@ -295,18 +332,15 @@ footer{
     row-gap: 20px;
 }
 
+#contactus{
+    background-color: black;
+    height: 200px;
+    width: 100%;
+}
 .socials{
     display: flex;
-    height: fit-content ;
-    width: fit-content;
-    max-width: 900px;
-    background-color: rgb(157, 157, 255);
-    border-radius: 10px;
-    padding: 10px 10px;
-    column-gap: 10px;
-    animation: bluepopup linear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 20%;
+    padding: 20px 20px;
+    column-gap: 30px;
     flex-direction: row;
 }
 .gmail{
@@ -317,9 +351,7 @@ width: 50px;
 border-radius: 5px;
 }
 .gmail img{
-    width: 50px;
     height: 50px;
-    background-color:  white;
     border-radius: 5px;
 }
 .tele{
@@ -333,8 +365,8 @@ border-radius: 5px;
     height: 50px;
     background-color: white;
     border-radius: 5px;
-    border-left: 5px solid white;
-    border-right: 5px solid white;
+    border-left: white solid 5px;
+    border-right: white solid 5px;
     align-self: center;
 }
 .Facebook{
@@ -346,7 +378,6 @@ border-radius: 5px;
 }
 .Facebook img{
     height: 50px;
-    background-color:  white;
     border-radius: 5px;
 }
 .twitter{
@@ -358,7 +389,6 @@ border-radius: 5px;
 }
 .twitter img{
     height: 50px;
-    background-color:  white;
     border-radius: 5px;
 }
 .youtube{
@@ -370,7 +400,6 @@ border-radius: 5px;
 }
 .youtube img{
     height: 50px;
-    background-color:  white;
     border-radius: 5px;
 }
 .instagram{
@@ -382,7 +411,6 @@ border-radius: 5px;
 }
 .instagram img{
     height: 50px;
-    background-color:  white;
     border-radius: 5px;
 }
 
@@ -392,19 +420,31 @@ border-radius: 5px;
     height: fit-content;
     width: fit-content;
     max-width: 750px;
-    border-radius: 10px;
+    border: solid rgb(128, 25, 25);
     background-color: rgb(255, 54, 54);
     padding: 10px;
     animation: redpopup linear both;
     animation-timeline: view();
     animation-range: entry 50% cover 50%;
 }
+.redblock2{
+    height: fit-content;
+    width: fit-content;
+    max-width: 750px;
+    border: solid rgb(128, 25, 25);
+    background-color: rgb(255, 54, 54);
+    padding: 10px;
+    animation: redpopup linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    right: -100px;
+}
 .blueblock{
     height: fit-content ;
     width: fit-content;
     max-width: 750px;
+    border: solid rgb(64, 64, 104);
     background-color: rgb(157, 157, 255);
-    border-radius: 10px;
     padding: 10px;
     animation: bluepopup linear both;
     animation-timeline: view();
@@ -414,19 +454,21 @@ border-radius: 5px;
 /*all text classes*/
 .titles{
     font-family: Bebas;
-    font-size: 50px;
+    font-size: clamp(20px, 50px, 100px);
     text-align: center;
     color: white;
 }
 .title{
     font-family: Bebas;
-    font-size: 50px;
+    font-size: clamp(20px, 50px, 100px);
     text-align: center;
     color: white;
 }
 .title3{
+    display: inline-block;
+    width: 100px;
     font-family: Bebas;
-    font-size: 25px;
+    font-size: clamp(20px, 50px, 100px);
     text-align: center;
     color: white;
     background-color: rgb(255, 54, 54);
@@ -436,36 +478,38 @@ border-radius: 5px;
 }
 .paragraph{
     font-family: Kanit;
-    font-size: 20px;
+    font-size: clamp(15px, 20px, 60px);
     text-align: center;
     color: white;
 }
 .paragraph2{
     font-family: Kanit;
-    font-size:small;
+    font-size: clamp(10px, 15px, 60px);
     text-align: center;
     color: white;
 }
 .paragraph3{
     font-family: Kanit;
-    font-size:small;
+    font-size: clamp(10px, 15px, 40px);
     text-align: center;
     color: white;
     background-color: rgb(157, 157, 255);
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     border: solid rgb(64, 64, 104);
     box-shadow: 5px 5px rgb(64, 64, 104);
 }
-.paragraph4{
+.paragraph5{
     font-family: Kanit;
-    font-size:small;
+    font-size: clamp(15px, 20px, 60px);
+    text-decoration: underline;
     text-align: center;
     color: white;
-    background-color: rgb(255, 54, 54);
-    border-radius: 10px;
-    border: solid rgb(128, 25, 25);
-    box-shadow: 5px 5px rgb(128, 25, 25);
+    background-color: rgb(157, 157, 255);
+    /*border-radius: 10px;*/
+    border: solid rgb(64, 64, 104);
+    box-shadow: 5px 5px rgb(64, 64, 104);
 }
+
 
 /*animation for all blocks*/
 @keyframes redpopup{
@@ -487,9 +531,24 @@ border-radius: 5px;
         box-shadow: 10px 10px rgb(64, 64, 104);
     }
 }
+@media (max-width: 500px){section{
+    grid-template-columns: 500px;
+    grid-auto-rows: min-content;
+    transform: translateX(10px);
+}
+@media (max-width: 500px){.redblock,.redblock2,.blueblock,.influence{
+    width: 90%;
+}}
+@media (max-width:500px){.socials{
+    padding: 10px;
+    column-gap: 15px;
+}}
+
+    
+}
 
 /*breakpoint for 1000px*/
-@media (max-width:1000px;){
+/*@media (max-width:1000px;){
     head, main, aside, section, article, footer{
         width: 100%;
     }
@@ -506,7 +565,7 @@ border-radius: 5px;
 }
 
 /*breakpoint for 800px*/
-@media (max-width:800px;){
+/*@media (max-width:800px;){
     head, main, aside, section, article, footer{
         width: 100%;
     }
@@ -521,9 +580,45 @@ border-radius: 5px;
         width: 50%;
     }
 }
+
+/*breakpoint for 600px*/
+/*@media (max-width:600px;){
+    head, main, aside, section, article, footer{
+        width: 100%;
+    }
+}
+@media (max-width:600px;){
+    .container, .wrapper, .wrapholder{
+        width: 100%;
+    }
+}
+@media (max-width:600px;){
+    .container2, .wrapper2, .wrapholder2, .influence{
+        width: 50%;
+    }
+}
+@media (max-width:600px;){@keyframes redpopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-30px, -30px);
+        box-shadow: 30px 30px rgb(128, 25, 25);
+    }
+}}
+
+@media (max-width:600px;){@keyframes bluepopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-30px, -30px);
+        box-shadow: 30px 30px rgb(64, 64, 104);
+    }
+}}
 
 /*breakpoint for 500px*/
-@media (max-width:500px;){
+/*@media (max-width:500px;){
     head, main, aside, section, article, footer{
         width: 100%;
     }
@@ -538,9 +633,28 @@ border-radius: 5px;
         width: 50%;
     }
 }
+@media (max-width:500px;){@keyframes redpopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-30px, -30px);
+        box-shadow: 30px 30px rgb(128, 25, 25);
+    }
+}}
+
+@media (max-width:500px;){@keyframes bluepopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-30px, -30px);
+        box-shadow: 30px 30px rgb(64, 64, 104);
+    }
+}}
 
 /*breakpoint for 301px*/
-@media (max-width:301px;){
+/*@media (max-width:301px;){
     head, main, aside, section, article, footer{
     width: 100%;}
 }
@@ -554,11 +668,30 @@ border-radius: 5px;
         width: 50%;
     }
 }
+@media (max-width:301px;){@keyframes redpopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-30px, -30px);
+        box-shadow: 30px 30px rgb(128, 25, 25);
+    }
+}}
+
+@media (max-width:301px;){@keyframes bluepopup{
+    from{
+        transform: translate(10px, 10px);
+    }
+    to{
+        transform: translate(-30px, -30px);
+        box-shadow: 30px 30px rgb(64, 64, 104);
+    }
+}}
 
 /*breakpoint for intro image*/
 @media (min-height:450px){
     img{
-        max-height: 450px;
+        max-height: 350px;
     }
 }
 
